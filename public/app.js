@@ -43,6 +43,18 @@ http.createServer(function (req, res){
             console.log("Contact page")
             staticFile(res, './html/contact.html', '.html');
             break;
+        case '/about':
+            console.log("About page");
+            staticFile(res, './html/about.html', '.html');
+            break;
+        case '/admin':
+            console.log("Admin page");
+            staticFile(res, './html/admin.html', '.html');
+            break;
+        case '/login':
+            console.log("Login page");
+            staticFile(res, './html/login.html', '.html');
+            break;
         default:
             const extname = String(path.extname(url)).toLocaleLowerCase();
             if(extname in mimeTypes) staticFile(res, url, extname);
